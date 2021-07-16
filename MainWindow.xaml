@@ -1,0 +1,33 @@
+﻿<Window x:Class="Midterm_zombie.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Midterm_zombie"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="820" Width="1233">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal" Height="35" VerticalAlignment="Top">
+            <Label Content="Name:" Width="60" FontSize="13" FontWeight="Bold"/>
+            <TextBox x:Name="Name" TextWrapping="Wrap" Width="110"/>
+            <Label Content="Row:" Width="60" FontSize="13" FontWeight="Bold"/>
+            <TextBox x:Name="Row" TextWrapping="Wrap" Width="110"/>
+            <Label Content="Column:" Width="60" FontSize="13" FontWeight="Bold"/>
+            <TextBox x:Name="Col" TextWrapping="Wrap" Width="110"/>
+            <Label Content="Humans:" Width="60" FontSize="13" FontWeight="Bold"/>
+            <TextBox x:Name="Human" TextWrapping="Wrap" Width="110"/>
+            <Label Content="Zombies:" Width="60" FontSize="13" FontWeight="Bold"/>
+            <TextBox x:Name="Zombie" TextWrapping="Wrap" Width="110"/>
+            <Label Content="Options:" Width="60" FontSize="13" FontWeight="Bold"/>
+            <StackPanel>
+                <RadioButton Content="Wait until all become zombies" GroupName="A" Checked="ChooseOption"/>
+                <RadioButton Content="Specify" GroupName="A" Checked="ChooseOption"/>
+            </StackPanel>
+            <TextBox x:Name="Spe" TextWrapping="Wrap" Width="143"/>
+        </StackPanel>
+
+        <Button Content="Simulate" Width="138" Height="50" FontSize="23" FontWeight="Heavy" RenderTransformOrigin="4.119,-1.348" Click="Simulation" Margin="0,25,0,10"/>
+
+        <Grid x:Name="MyGrid" Margin="25,0,25,25"></Grid>
+    </StackPanel>
+</Window>
